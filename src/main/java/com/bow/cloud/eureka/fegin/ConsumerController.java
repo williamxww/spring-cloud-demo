@@ -18,7 +18,7 @@ public class ConsumerController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerController.class);
 
     @Autowired
-    private FeignCalculator calculator;
+    private ICalculator calculator;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public int add(@RequestParam(value = "a") int a, @RequestParam(value = "b") int b) {
