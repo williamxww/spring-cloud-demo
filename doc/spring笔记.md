@@ -36,10 +36,29 @@ BootstrapClassLoader、ExtClassLoader、AppClassLoader分别对应的加载路�
 
 
 
+读取多个jar的META-INF/spring.factories文件，
+
+org.springframework.boot.SpringApplication#getSpringFactoriesInstances(java.lang.Class<T>)
+
+
+
 spring boot 源码
 
 https://blog.csdn.net/dm_vincent/article/details/76735888
 
+https://segmentfault.com/a/1190000006918229
+
+
+
+SpringApplication对象创建时，初始化ApplicationContextInitializer, ApplicationListener
+两接口的相关实现放置在META-INF/spring.factories
+
+准备Environment
+context初始化前的准备
+
+
+org.springframework.context.annotation.AnnotatedBeanDefinitionReader#registerBean(java.lang.Class<?>, java.lang.String, java.lang.Class<? extends java.lang.annotation.Annotation>...)
+AnnotatedGenericBeanDefinition
 
 
 HashMap源码解析
