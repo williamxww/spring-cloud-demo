@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author vv
  * @since 2018/4/2.
  */
-@EnableDemo
+@EnableDemo(policy = "dev")
 public class Demo {
 
     public static void main(String[] args) throws IOException {

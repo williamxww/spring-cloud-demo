@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Configuration;
  * @since 2018/4/2.
  */
 @Configuration
-public class DemoConfig {
+public class DevConfig {
 
     @Bean
     public ContentService getService(){
-        return new SimpleContentService("demo");
+        return new SimpleContentService("dev");
     }
 }
