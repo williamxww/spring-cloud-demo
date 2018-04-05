@@ -1,0 +1,11 @@
+
+server:
+  port: 9003
+
+ice:
+  client:
+    name: printer-client
+
+spring:
+  application:
+    name: ice-service

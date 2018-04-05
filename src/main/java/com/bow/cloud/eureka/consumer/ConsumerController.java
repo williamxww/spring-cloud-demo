@@ -15,7 +15,7 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/customer")
+    @RequestMapping("/consumer")
     public String customer() {
         String providerMsg = restTemplate.getForEntity("http://PROVIDER-SERVICE/provider",
                 String.class).getBody();

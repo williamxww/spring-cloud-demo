@@ -68,3 +68,24 @@ https://www.cnblogs.com/ITtangtang/p/3948406.html
 
 
 OSGI原理？
+
+
+
+spring cloud ribbon原理
+
+https://www.cnblogs.com/kongxianghai/p/8445030.html
+
+
+
+先写ICE-springcloud
+
+研究spring cloud sidecar
+
+spring-cloud-netflix-sidecar
+
+怎么支持GO的
+
+
+
+标记@RibbonClient
+RibbonClientConfiguration
