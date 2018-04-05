@@ -12,8 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.client.RestTemplate;
 
-import com.bow.cloud.eureka.provider.ProviderApp;
-
 @EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(basePackageClasses = ConsumerApp.class)

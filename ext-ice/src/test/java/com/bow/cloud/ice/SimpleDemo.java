@@ -2,7 +2,6 @@ package com.bow.cloud.ice;
 
 import java.io.IOException;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 
