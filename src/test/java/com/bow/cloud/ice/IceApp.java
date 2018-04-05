@@ -6,7 +6,6 @@ import java.util.Properties;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
 /**
@@ -15,7 +14,7 @@ import org.springframework.core.io.ClassPathResource;
  */
 @SpringBootApplication
 //@EnableDiscoveryClient
-@EnableIceClients
+@EnableIceClients(basePackages = "com.bow.cloud.ice")
 public class IceApp {
 
 
@@ -29,13 +28,7 @@ public class IceApp {
         app.run();
     }
 
-    public static void simple() throws IOException{
-        // @PropertySource(value = { "classpath:application.properties" }) 怎么设置
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(IceApp.class);
-        IPrinter service = context.getBean(IPrinter.class);
-        service.printer("Thank god");
-        System.in.read();
-    }
+
 
     public static void main(String[] args) throws IOException {
         boot();

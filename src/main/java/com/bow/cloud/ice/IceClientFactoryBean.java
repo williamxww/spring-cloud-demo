@@ -15,11 +15,16 @@ import org.springframework.util.Assert;
  * @author vv
  * @since 2018/4/5.
  */
-public class IceClientFactoryBean implements FactoryBean<Object>,MethodInterceptor, InitializingBean, ApplicationContextAware {
+public class IceClientFactoryBean<S> implements FactoryBean<S>, MethodInterceptor, InitializingBean, ApplicationContextAware {
 
-    private Class<?> type;
+    private Class<S> type;
 
     private String name;
+
+    /**
+     * 客户端调用的代理
+     */
+    private S proxy;
 
     private ApplicationContext applicationContext;
 
@@ -29,9 +34,14 @@ public class IceClientFactoryBean implements FactoryBean<Object>,MethodIntercept
         return null;
     }
 
+
     @Override
-    public Object getObject() throws Exception {
-        return new ProxyFactory().getProxy(type, this);
+    public S getObject() throws Exception {
+        return proxy;
+    }
+
+    public void initProxy(){
+        this.proxy = new ProxyFactory().getProxy(type, this);
     }
 
     @Override
@@ -47,6 +57,7 @@ public class IceClientFactoryBean implements FactoryBean<Object>,MethodIntercept
     @Override
     public void afterPropertiesSet() throws Exception {
         Assert.hasText(this.name, "Name must be set");
+        initProxy();
     }
 
     @Override
@@ -54,11 +65,11 @@ public class IceClientFactoryBean implements FactoryBean<Object>,MethodIntercept
         this.applicationContext = context;
     }
 
-    public Class<?> getType() {
+    public Class<S> getType() {
         return type;
     }
 
-    public void setType(Class<?> type) {
+    public void setType(Class<S> type) {
         this.type = type;
     }
 

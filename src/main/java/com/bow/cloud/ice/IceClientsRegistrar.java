@@ -116,8 +116,7 @@ public class IceClientsRegistrar implements ImportBeanDefinitionRegistrar,
         }
 
         for (String basePackage : basePackages) {
-            Set<BeanDefinition> candidateComponents = scanner
-                    .findCandidateComponents(basePackage);
+            Set<BeanDefinition> candidateComponents = scanner.findCandidateComponents(basePackage);
             for (BeanDefinition candidateComponent : candidateComponents) {
                 if (candidateComponent instanceof AnnotatedBeanDefinition) {
                     // verify annotated class is an interface
@@ -127,12 +126,10 @@ public class IceClientsRegistrar implements ImportBeanDefinitionRegistrar,
                             "@FeignClient can only be specified on an interface");
 
                     Map<String, Object> attributes = annotationMetadata
-                            .getAnnotationAttributes(
-                                    IceClient.class.getCanonicalName());
+                            .getAnnotationAttributes(IceClient.class.getCanonicalName());
 
                     String name = getClientName(attributes);
-                    registerClientConfiguration(registry, name,
-                            attributes.get("configuration"));
+                    registerClientConfiguration(registry, name, attributes.get("configuration"));
 
                     registerIceClient(registry, annotationMetadata, attributes);
                 }

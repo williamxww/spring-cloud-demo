@@ -23,6 +23,7 @@ import org.springframework.context.annotation.Configuration;
 @AutoConfigureAfter(name = "org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration")
 // 需要在LoadBalancerAutoConfiguration前执行
 @AutoConfigureBefore({ LoadBalancerAutoConfiguration.class, AsyncLoadBalancerAutoConfiguration.class })
+@Deprecated
 public class IceAutoConfiguration {
 
     @Bean

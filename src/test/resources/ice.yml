@@ -9,3 +9,7 @@ ice:
 spring:
   application:
     name: ice-service
+
+logging:
+  level:
+    org.springframework: INFO
