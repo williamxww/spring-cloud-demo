@@ -13,7 +13,7 @@ import org.springframework.core.io.ClassPathResource;
  * @since 2018/4/5.
  */
 @SpringBootApplication
-@EnableIceClients(basePackages = "com.bow.cloud.ice")
+@EnableIceClients(basePackages = "com.bow.cloud.ice", defaultConfiguration = SimpleClientConfiguration.class)
 public class IceApp {
 
 

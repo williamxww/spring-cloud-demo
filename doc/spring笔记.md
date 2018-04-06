@@ -89,3 +89,8 @@ spring-cloud-netflix-sidecar
 
 标记@RibbonClient
 RibbonClientConfiguration
+
+
+SidecarController#DiscoveryClient的实现类是如何注入的
+
+SidecarProperties的 @ConfigurationProperties("sidecar")原理

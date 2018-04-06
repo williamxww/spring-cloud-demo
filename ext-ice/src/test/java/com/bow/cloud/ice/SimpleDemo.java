@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
  * @since 2018/4/5.
  */
 //@SpringBootApplication
-@EnableIceClients
+@EnableIceClients(basePackages = "com.bow.cloud.ice", defaultConfiguration = SimpleClientConfiguration.class)
 @PropertySource(value = { "classpath:simple.properties" })
 public class SimpleDemo {
 
