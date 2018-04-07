@@ -10,6 +10,9 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * http://localhost:9003/hosts/sidecarTest 访问所代理服务的信息
+ * 注意consumer 用feign访问
+ *
  * @author vv
  * @since 2018/4/6.
  */

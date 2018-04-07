@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * localhost:9001/cal/add?a=1&b=2
+ * localhost:9002/cal/add?a=1&b=2
  */
 @RestController
 @RequestMapping("/cal")
