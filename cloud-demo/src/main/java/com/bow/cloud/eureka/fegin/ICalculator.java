@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 计算器
- * 
+ * 普通调用 serviceId  provider-service
+ * sidecar serviceId sidecarTest
  * @author vv
  * @since 2018/3/27.
  */
-@FeignClient(value = "provider-service")
+@FeignClient(value = "sidecarTest")
 public interface ICalculator {
 
     @RequestMapping(value = "/calculate/add", method = RequestMethod.GET)

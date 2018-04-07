@@ -11,6 +11,8 @@
     <modules>
         <module>cloud-demo</module>
         <module>ext-ice</module>
+        <module>service-comb</module>
+        <module>side-car</module>
     </modules>
 
     <properties>

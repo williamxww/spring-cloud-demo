@@ -1,10 +1,10 @@
 server:
-  port: 8081 # 服务端口
+  port: 9001 # 服务端口
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8888/eureka/ # 服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/ # 服务注册中心地址
 
 spring:
   application:
