@@ -1,4 +1,12 @@
+### spring
 
+> 此部分描述要移动到spring-demo项目中
+
+advice: 通知，增强的逻辑
+
+pointcut: 指明作用位置
+
+joinpoint:  运行时通过joinpoint能够获取到各种反射信息，其子类Invocation更能体现此特点
 
 
 
@@ -94,3 +102,31 @@ RibbonClientConfiguration
 SidecarController#DiscoveryClient的实现类是如何注入的
 
 SidecarProperties的 @ConfigurationProperties("sidecar")原理
+
+
+
+
+
+## Hystrix
+
+### @EnableHystrix
+
+spring-cloud & Hystrix
+
+在spring-cloud-netflix-core.jar的spring.factories中有如下配置，因此 `EnableCircuitBreakerImportSelector extends  SpringFactoryImportSelector<EnableCircuitBreaker>` 能够引入`EnableCircuitBreaker` 对应的配置
+
+```properties
+org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker=\
+org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration
+```
+
+最终通过切面`HystrixCommandAspect`实现。
+
+### HystrixCommand
+
+
+
+```
+
+```
+
