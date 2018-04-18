@@ -127,6 +127,6 @@ org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration
 
 
 ```
-
+BucketedCounterStream 滑动窗口的bucket统计
 ```
 
