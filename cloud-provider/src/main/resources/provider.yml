@@ -9,3 +9,19 @@ eureka:
 spring:
   application:
     name: provider-service # 服务名称
+  resources: # 指定静态资源的路径
+    static-locations: classpath:/
+
+  cloud:
+    config:
+#      discovery:
+#        enabled: true
+#        service-id: configServer
+      uri: http://localhost:8888/
+      profile: dev #环境
+      label: 0.1 #版本
+
+# 为了能够刷新配置
+management:
+  security:
+    enabled: false

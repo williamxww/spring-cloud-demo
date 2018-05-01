@@ -5,13 +5,13 @@ import java.util.Properties;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.ClassPathResource;
 
-@EnableEurekaServer
 @SpringBootApplication
-@ComponentScan(basePackageClasses = ProviderApp.class)
+@EnableDiscoveryClient
+//@ComponentScan(basePackageClasses = ProviderApp.class)
 public class ProviderApp {
 
     public static void main(String[] args) {

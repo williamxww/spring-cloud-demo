@@ -12,10 +12,20 @@
     <artifactId>config</artifactId>
 
     <dependencies>
-        <!--  config -->
+        <!--  eureka client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!--  config server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <!-- bus -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
     </dependencies>
 

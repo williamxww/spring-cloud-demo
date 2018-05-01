@@ -6,13 +6,18 @@ import java.util.Properties;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * http://localhost:8083/config-demo/dev
- * 此demo独立启动，能够将resources/config下的文件通过服务展示出来
+ * server 启动后通过
+ * http://localhost:8888/provider-service/dev/0.1
+ * 将resources/config下的文件通过服务展示出来
+ * 请求格式：appId/profile/label(版本)
  */
+
 @SpringBootApplication
+//@EnableDiscoveryClient
 @EnableConfigServer
 public class ConfigApp {
 
